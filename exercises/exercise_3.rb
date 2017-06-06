@@ -6,3 +6,12 @@ puts "Exercise 3"
 puts "----------"
 
 # Your code goes here ...
+@store3 = Store.find(3)
+
+# Store.methods.each do |method|
+#   p method
+# end
+
+Store.destroy(@store3)
+
+p Store.all
