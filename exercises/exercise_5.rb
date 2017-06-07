@@ -8,3 +8,8 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+total_revenue = Store.sum :annual_revenue
+pp total_revenue
+
+average_revenue =  total_revenue / Store.count  
+puts average_revenue

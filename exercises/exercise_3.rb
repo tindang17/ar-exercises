@@ -14,4 +14,4 @@ puts "----------"
 
 Store.destroy(@store3)
 
-p Store.all
+p Store.count

@@ -10,3 +10,7 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+puts "What is your store name?"
+
+store_name = Store.create(name: "Po", annual_revenue: 20, mens_apparel: true, womens_apparel: false)
+

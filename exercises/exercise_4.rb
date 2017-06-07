@@ -12,5 +12,17 @@ Store.create(name: 'Whistler', annual_revenue: 1900000, mens_apparel: true, wome
 Store.create(name: 'Yaletown', annual_revenue:430000, mens_apparel: true, womens_apparel: false)
 
 # puts Store.count
-@mens_stores = Store.all.where(mens_apparel: true, womens_apparel: false)
-pp @mens_stores
+
+# Stores that only sell clothes for men
+@mens_stores = Store.where(mens_apparel: true, womens_apparel: false)
+
+mens_stores = @mens_stores
+
+mens_stores.each do |store|
+  puts store[:name]
+  puts store[:annual_revenue]
+end
+
+# Stores that only sell clothes for women
+@womens_stores = Store.where(["mens_apparel = ? and womens_apparel = ? and annual_revenue < ?", false, true, 1_000_000])
+women_stores = @womens_stores 
